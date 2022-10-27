@@ -1,0 +1,13 @@
+:root {
+  --rounded-sm: 4px;
+  --rounded-md: 8px;
+  --rounded-lg: 16px;
+
+  --color-water: #6390f0;
+  --color-ice: #96d9d6;
+  --color-fire: #ee8130;
+}
+
+body {
+  font-family: 'Roboto';
+}

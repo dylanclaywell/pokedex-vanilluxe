@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PokeDex Vanilluxe</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="./src/js/components/card.js"></script>
+    <script src="./src/js/components/grid.js"></script>
+    <script src="./src/js/main.js"></script>
+
+    <link rel="stylesheet" href="./src/css/globals.css" />
+    <link rel="stylesheet" href="./src/css/card.css" />
+    <link rel="stylesheet" href="./src/css/grid.css" />
+  </head>
+  <body>
+    <template id="Grid">
+      <div class="Grid"></div>
+    </template>
+    <template id="Card">
+      <div class="Card">
+        <span class="Card--title"></span>
+        <img class="Card--image" />
+        <span class="Card--subtitle"></span>
+      </div>
+    </template>
+  </body>
+</html>

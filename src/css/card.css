@@ -1,0 +1,23 @@
+.Card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--rounded-lg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.Card--image {
+  filter: drop-shadow(0 0 0.25rem #474747);
+}
+
+.Card__water {
+  background-color: var(--color-water);
+}
+
+.Card__ice {
+  background-color: var(--color-ice);
+}
+
+.Card__fire {
+  background-color: var(--color-fire);
+}
