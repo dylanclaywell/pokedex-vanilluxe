@@ -1,0 +1,10 @@
+.Input__label {
+  position: relative;
+}
+
+.Input__label-text {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0.25rem;
+}

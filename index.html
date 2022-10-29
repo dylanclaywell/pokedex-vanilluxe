@@ -10,13 +10,21 @@
       rel="stylesheet"
     />
 
+    <script src="./src/js/utils.js"></script>
+
+    <script src="./src/js/component.js"></script>
+
+    <script src="./src/js/components/link.js"></script>
     <script src="./src/js/components/card.js"></script>
     <script src="./src/js/components/grid.js"></script>
+    <script src="./src/js/components/container.js"></script>
+    <script src="./src/js/components/input.js"></script>
     <script src="./src/js/main.js"></script>
 
     <link rel="stylesheet" href="./src/css/globals.css" />
     <link rel="stylesheet" href="./src/css/card.css" />
     <link rel="stylesheet" href="./src/css/grid.css" />
+    <link rel="stylesheet" href="./src/css/input.css" />
   </head>
   <body>
     <template id="Grid">
@@ -24,10 +32,22 @@
     </template>
     <template id="Card">
       <div class="Card">
-        <span class="Card--title"></span>
-        <img class="Card--image" />
-        <span class="Card--subtitle"></span>
+        <span class="Card__title"></span>
+        <img class="Card__image" />
+        <span class="Card__subtitle"></span>
       </div>
+    </template>
+    <template id="Link">
+      <a class="Link"></a>
+    </template>
+    <template id="Input">
+      <label class="Input__label">
+        <span class="Input__label-text">Search</span>
+        <input class="Input" />
+      </label>
+    </template>
+    <template id="Container">
+      <div class="Container"></div>
     </template>
   </body>
 </html>

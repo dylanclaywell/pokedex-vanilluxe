@@ -17,20 +17,33 @@ async function load() {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     const data = await response.json()
 
-    cards.push(
-      new Card({
+    const link = new Link({
+      children: new Card({
         title: data.name,
         imageUrl: data.sprites.front_default,
         types: data.types,
-      })
-    )
+      }),
+      href: 'https://google.com',
+      target: '_blank',
+      ariaLabel: 'Google',
+    })
+
+    cards.push(link)
   }
 
   const grid = new Grid({
     children: cards,
   })
 
-  document.querySelector('body').appendChild(grid.render())
+  const input = new Input({
+    label: 'Search',
+  })
+
+  const container = new Container({
+    children: [input, grid],
+  })
+
+  document.querySelector('body').appendChild(container.render())
 }
 
 window.onload = load

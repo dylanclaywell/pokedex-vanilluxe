@@ -1,14 +1,14 @@
 function Grid({ children }) {
-  this.children = children
+  Component.call(this, { name: 'Grid', children })
 
   this.render = function () {
     const template = document.querySelector('#Grid')
     const clone = template.content.querySelector('div').cloneNode(true)
 
-    for (const child of this.children) {
-      clone.appendChild(child.render())
-    }
+    this.addChildren(clone)
 
     return clone
   }
 }
+
+Object.setPrototypeOf(Grid.prototype, Component.prototype)
