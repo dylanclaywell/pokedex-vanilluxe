@@ -1,24 +1,25 @@
-.Input__label {
+.text-field__label {
   position: relative;
 }
 
-.Input__label-text {
+.text-field__label-text::slotted(*) {
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
   left: 1rem;
   cursor: text;
   transition: 300ms all;
+  font-size: 1rem;
 }
 
-.Input__label:focus-within .Input__label-text,
-.Input__label-text:not(:placeholder-shown) {
+.text-field__label:focus-within .text-field__label-text::slotted(*),
+.text-field:not(:placeholder-shown) ~ .text-field__label-text::slotted(*) {
   color: black;
   top: -25%;
   font-size: 0.75rem;
 }
 
-.Input {
+.text-field {
   padding: 1rem;
   border-radius: var(--rounded-md);
   border: 1px solid gray;
