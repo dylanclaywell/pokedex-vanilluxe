@@ -18,21 +18,44 @@ button {
 .visible {
   visibility: visible;
   opacity: 1;
+  flex-grow: 1;
+}
+
+.pokemon-grid {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .pokemon-grid__search-form {
+  position: sticky;
+  top: 1rem;
+  z-index: 1000;
+  margin-top: 1rem;
   display: flex;
   gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
+  transition: 300ms all;
+}
+
+.pokemon-grid__search-form--active {
+  flex-grow: 0;
 }
 
 .pokemon-grid__search-results {
-  margin-top: 1rem;
+  margin: 1rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  transition: 300ms all;
+  grid-auto-rows: min-content;
 }
 
 .loader {
+  z-index: 10000;
   background-image: url('../../public/vanilluxe.png');
   width: 100px;
   height: 100px;

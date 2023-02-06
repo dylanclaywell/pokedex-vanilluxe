@@ -36,17 +36,19 @@
       </div>
     </template>
     <template id="pokemon-grid">
-      <link rel="stylesheet" href="./src/css/pokemon-grid.css" />
-      <form class="pokemon-grid__search-form">
-        <text-field class="pokemon-grid__search-field">
-          <span slot="label">Name</span>
-        </text-field>
-        <button type="submit" class="pokemon-grid__search-button">
-          Search
-        </button>
-      </form>
-      <div class="hidden loader"></div>
-      <div class="visible pokemon-grid__search-results"></div>
+      <div class="pokemon-grid">
+        <link rel="stylesheet" href="./src/css/pokemon-grid.css" />
+        <form class="pokemon-grid__search-form">
+          <text-field class="pokemon-grid__search-field">
+            <span slot="label">Name</span>
+          </text-field>
+          <button type="submit" class="pokemon-grid__search-button">
+            Search
+          </button>
+        </form>
+        <div class="hidden loader"></div>
+        <div class="hidden pokemon-grid__search-results"></div>
+      </div>
     </template>
     <pokemon-grid />
   </body>

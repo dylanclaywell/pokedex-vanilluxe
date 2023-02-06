@@ -23,7 +23,9 @@ class TextField extends HTMLElement {
   onKeyDown(event) {
     if (event.key === 'Enter') {
       const form = this.closest('form')
-      form.dispatchEvent(new Event('submit', { bubbles: true }))
+      form.dispatchEvent(
+        new Event('submit', { bubbles: true, cancelable: true })
+      )
     }
   }
 }

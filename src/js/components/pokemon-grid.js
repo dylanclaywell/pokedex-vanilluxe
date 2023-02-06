@@ -51,6 +51,9 @@ class PokemonGrid extends HTMLElement {
     const searchResultsNode = this.shadowRoot.querySelector(
       '.pokemon-grid__search-results'
     )
+    const searchFormNode = this.shadowRoot.querySelector(
+      '.pokemon-grid__search-form'
+    )
 
     const cards = []
 
@@ -70,6 +73,9 @@ class PokemonGrid extends HTMLElement {
     }
 
     searchResultsNode.replaceChildren(...cards)
+    searchResultsNode.classList.remove('hidden')
+    searchResultsNode.classList.add('visible')
+    searchFormNode.classList.add('pokemon-grid__search-form--active')
   }
 
   setIsLoading(isLoading) {
