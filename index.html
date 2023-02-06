@@ -10,34 +10,63 @@
       rel="stylesheet"
     />
 
-    <script src="./src/js/utils.js"></script>
+    <script src="./src/utils.js"></script>
 
-    <script src="./src/js/components/pokemon-card.js"></script>
-    <script src="./src/js/components/text-field.js"></script>
-    <script src="./src/js/components/pokemon-grid.js"></script>
-    <script src="./src/js/main.js"></script>
+    <script src="./src/components/pokemon-card/pokemon-card.js"></script>
+    <script src="./src/components/text-field/text-field.js"></script>
+    <script src="./src/components/pokemon-grid/pokemon-grid.js"></script>
+    <script src="./src/components/radio-button/radio-button.js"></script>
+    <script src="./src/main.js"></script>
 
-    <link rel="stylesheet" href="./src/css/globals.css" />
+    <link rel="stylesheet" href="./src/globals.css" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <template id="text-field">
-      <link rel="stylesheet" href="./src/css/text-field.css" />
+      <link
+        rel="stylesheet"
+        href="./src/components/text-field/text-field.css"
+      />
       <label class="text-field__label">
         <input class="text-field" placeholder=" " />
         <slot name="label" class="text-field__label-text"></slot>
       </label>
     </template>
     <template id="pokemon-card">
-      <link rel="stylesheet" href="./src/css/pokemon-card.css" />
+      <link
+        rel="stylesheet"
+        href="./src/components/pokemon-card/pokemon-card.css"
+      />
       <div class="pokemon-card">
         <span class="pokemon-card__title"></span>
         <img class="pokemon-card__image" />
         <span class="pokemon-card__subtitle"></span>
       </div>
     </template>
+    <template id="radio-button">
+      <link
+        rel="stylesheet"
+        href="./src/components/radio-button/radio-button.css"
+      />
+      <label class="radio-button">
+        <input type="radio" class="radio-button__input" />
+        <slot class="radio-button__label">Radio Button</slot>
+      </label>
+    </template>
     <template id="pokemon-grid">
+      <link
+        rel="stylesheet"
+        href="./src/components/pokemon-grid/pokemon-grid.css"
+      />
+      <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+      />
       <div class="pokemon-grid">
-        <link rel="stylesheet" href="./src/css/pokemon-grid.css" />
         <form class="pokemon-grid__search-form">
           <text-field class="pokemon-grid__search-field">
             <span slot="label">Name</span>
@@ -45,11 +74,13 @@
           <button type="submit" class="pokemon-grid__search-button">
             Search
           </button>
+          <span class="material-icons"> filter_list </span>
         </form>
         <div class="hidden loader"></div>
         <div class="hidden pokemon-grid__search-results"></div>
       </div>
     </template>
-    <pokemon-grid />
+    <pokemon-grid></pokemon-grid>
+    <!-- <div class="filter-modal"><radio-button></radio-button></div> -->
   </body>
 </html>

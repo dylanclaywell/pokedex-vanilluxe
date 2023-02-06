@@ -59,3 +59,4 @@ indexedDBRequest.onupgradeneeded = async (event) => {
 customElements.define('text-field', TextField)
 customElements.define('pokemon-grid', PokemonGrid)
 customElements.define('pokemon-card', PokemonCard)
+customElements.define('radio-button', RadioButton)
