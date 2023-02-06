@@ -1,0 +1,63 @@
+button {
+  background-color: var(--color-primary);
+  border-radius: var(--rounded-md);
+  border: none;
+  color: white;
+  padding: 1.1rem 2.1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.pokemon-grid__search-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pokemon-grid__search-results {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.loader {
+  background-image: url('../../public/vanilluxe.png');
+  width: 100px;
+  height: 100px;
+  animation: 3s spin-and-grow infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.75;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+}
+
+@keyframes spin-and-grow {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+
+  33% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(1);
+  }
+
+  66% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(1.2);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(1);
+  }
+}

@@ -3,12 +3,13 @@
 }
 
 .text-field__label-text::slotted(*) {
+  color: var(--color-gray-600);
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
   left: 1rem;
   cursor: text;
-  transition: 300ms all;
+  transition: 300ms top, 300ms font-size;
   font-size: 1rem;
 }
 

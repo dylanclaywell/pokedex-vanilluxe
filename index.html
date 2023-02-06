@@ -12,28 +12,14 @@
 
     <script src="./src/js/utils.js"></script>
 
-    <script src="./src/js/component.js"></script>
-
-    <script src="./src/js/components/link.js"></script>
-    <script src="./src/js/components/card.js"></script>
-    <script src="./src/js/components/grid.js"></script>
-    <script src="./src/js/components/container.js"></script>
+    <script src="./src/js/components/pokemon-card.js"></script>
     <script src="./src/js/components/text-field.js"></script>
     <script src="./src/js/components/pokemon-grid.js"></script>
     <script src="./src/js/main.js"></script>
 
     <link rel="stylesheet" href="./src/css/globals.css" />
-    <link rel="stylesheet" href="./src/css/card.css" />
-    <link rel="stylesheet" href="./src/css/grid.css" />
   </head>
   <body>
-    <template id="pokemon-card">
-      <div class="pokemon-card">
-        <slot name="title" class="pokemon-card__title"></slot>
-        <slot name="image" class="pokemon-card__image"></slot>
-        <slot name="subtitle" class="pokemon-card__subtitle"></slot>
-      </div>
-    </template>
     <template id="text-field">
       <link rel="stylesheet" href="./src/css/text-field.css" />
       <label class="text-field__label">
@@ -41,11 +27,26 @@
         <slot name="label" class="text-field__label-text"></slot>
       </label>
     </template>
+    <template id="pokemon-card">
+      <link rel="stylesheet" href="./src/css/pokemon-card.css" />
+      <div class="pokemon-card">
+        <span class="pokemon-card__title"></span>
+        <img class="pokemon-card__image" />
+        <span class="pokemon-card__subtitle"></span>
+      </div>
+    </template>
     <template id="pokemon-grid">
-      <text-field class="pokemon-grid__search-field">
-        <span slot="label">Search</span>
-      </text-field>
-      <button class="pokemon-grid__search-button">Search</button>
+      <link rel="stylesheet" href="./src/css/pokemon-grid.css" />
+      <form class="pokemon-grid__search-form">
+        <text-field class="pokemon-grid__search-field">
+          <span slot="label">Name</span>
+        </text-field>
+        <button type="submit" class="pokemon-grid__search-button">
+          Search
+        </button>
+      </form>
+      <div class="hidden loader"></div>
+      <div class="visible pokemon-grid__search-results"></div>
     </template>
     <pokemon-grid />
   </body>
