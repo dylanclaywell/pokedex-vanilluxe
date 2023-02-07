@@ -54,7 +54,7 @@
       />
       <label class="radio-button">
         <input type="radio" class="radio-button__input" />
-        <slot class="radio-button__label">Radio Button</slot>
+        <span class="radio-button__label">Radio Button</span>
       </label>
     </template>
     <template id="pokemon-grid">
@@ -81,6 +81,20 @@
       </div>
     </template>
     <pokemon-grid></pokemon-grid>
-    <!-- <div class="filter-modal"><radio-button></radio-button></div> -->
+    <div class="filter-modal">
+      <fieldset>
+        <legend class="filter-modal__legend">Search for</legend>
+        <radio-button
+          data-label="Pokemon"
+          data-value="pokemon"
+          data-name="searchFor"
+        ></radio-button>
+        <radio-button
+          data-label="Ability"
+          data-value="ability"
+          data-name="searchFor"
+        ></radio-button>
+      </fieldset>
+    </div>
   </body>
 </html>

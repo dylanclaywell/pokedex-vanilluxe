@@ -32,6 +32,9 @@
   --color-primary: #d32f2f;
   --color-primary-dark: #9a0007;
 
+  --color-primary-transparent: rgba(211, 47, 47, 0.25);
+  --color-primary-dark-transparent: rgba(154, 0, 7, 0.15);
+
   --color-secondary-light: #ffffff;
   --color-secondary: #ffffff;
   --color-secondary-dark: #cccccc;
@@ -68,4 +71,20 @@ body {
 a {
   text-decoration: none;
   color: black;
+}
+
+.filter-modal {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--rounded-md);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20000;
+}
+
+.filter-modal__heading {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }

@@ -1,4 +1,7 @@
 class RadioButton extends HTMLElement {
+  static get observedAttributes() {
+    return ['data-label', 'data-value', 'data-name']
+  }
   constructor() {
     super()
 
@@ -26,6 +29,20 @@ class RadioButton extends HTMLElement {
       form.dispatchEvent(
         new Event('submit', { bubbles: true, cancelable: true })
       )
+    }
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    switch (name) {
+      case 'data-label':
+        this.shadowRoot.querySelector('span').textContent = newValue
+        break
+      case 'data-value':
+        this.shadowRoot.querySelector('input').value = newValue
+        break
+      case 'data-name':
+        this.shadowRoot.querySelector('input').name =
+          this.shadowRoot.querySelector('input').id = newValue
     }
   }
 }
